@@ -77,6 +77,10 @@ declare namespace ReactDatetimeClass {
          */
         utc?: boolean;
         /*
+         Callback trigger for when the user navigates the calendar
+         */
+        onViewDateChange?: (value: Moment) => void;
+        /*
          Callback trigger when the date changes. The callback receives the selected `moment` object as
          only parameter, if the date in the input is valid. If the date in the input is not valid, the
          callback receives the value of the input (a string).

@@ -25,6 +25,7 @@ var Datetime = createClass({
 		onFocus: TYPES.func,
 		onBlur: TYPES.func,
 		onChange: TYPES.func,
+		onViewDateChange: TYPES.func,
 		onViewModeChange: TYPES.func,
 		onNavigateBack: TYPES.func,
 		onNavigateForward: TYPES.func,
@@ -139,6 +140,11 @@ var Datetime = createClass({
 		;
 
 		return formats;
+	},
+
+	componentDidUpdate: function( lastProps, lastState ) {
+		if ( lastState.viewDate !== this.state.viewDate && !lastState.viewDate.isSame( this.state.viewDate ) )
+			this.props.onViewDateChange( this.state.viewDate );
 	},
 
 	componentWillReceiveProps: function( nextProps ) {
@@ -463,6 +469,7 @@ Datetime.defaultProps = {
 	onFocus: function() {},
 	onBlur: function() {},
 	onChange: function() {},
+  onViewDateChange: function() {},
 	onViewModeChange: function() {},
 	onNavigateBack: function() {},
 	onNavigateForward: function() {},
