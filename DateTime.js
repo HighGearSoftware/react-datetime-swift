@@ -469,7 +469,7 @@ Datetime.defaultProps = {
 	onFocus: function() {},
 	onBlur: function() {},
 	onChange: function() {},
-  onViewDateChange: function() {},
+	onViewDateChange: function() {},
 	onViewModeChange: function() {},
 	onNavigateBack: function() {},
 	onNavigateForward: function() {},
