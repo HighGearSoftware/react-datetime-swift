@@ -1,3 +1,8 @@
+WARNING: This fork is no longer maitained or used to our knowledge.
+
+It is here as an archive.
+
+
 # react-datetime
 
 [![Build Status](https://secure.travis-ci.org/YouCanBookMe/react-datetime.svg)](https://travis-ci.org/YouCanBookMe/react-datetime)
